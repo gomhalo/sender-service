@@ -6,6 +6,28 @@
   <packaging>pom</packaging>
   <name>sender-service</name>
   <description>This is a sender-service</description>
+  
+ <!--  <parent>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-parent</artifactId>
+  <version>1.4.2</version>
+  <relativePath/> lookup parent from repository
+  </parent> -->
+  
+  <properties>
+  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  <java.version>1.8</java.version>
+   <maven.compiler.source>1.7</maven.compiler.source>
+ <maven.compiler.target>1.7</maven.compiler.target>
+  
+  </properties>
+  
+  <dependencyManagement>
+  <dependencies>
+  
+  </dependencies>
+ </dependencyManagement> 
   <modules>
   	<module>model</module>
   	<module>persistence</module>
