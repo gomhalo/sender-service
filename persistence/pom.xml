@@ -8,11 +8,12 @@
   <artifactId>persistence</artifactId>
   <name>persistence</name>
   <description>This will be the persistence module  for the sender-service microservice</description>
+  
   <dependencies>
   <dependency>
   <groupId>com.amanuel.aregay</groupId>
-  <artifactId>domain</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+    <artifactId>model</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
   </dependency>
   </dependencies>
 </project>

@@ -8,8 +8,4 @@
   <artifactId>model</artifactId>
   <name>model</name>
   <description>This will be the model for the sender-service microservice</description>
-  <dependencies>
-
-</dependencies>
-  
 </project>

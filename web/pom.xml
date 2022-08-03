@@ -8,7 +8,7 @@
   <artifactId>web</artifactId>
   <packaging>war</packaging>
   <name>web</name>
-  <description>This will be the web module  for the sender-service microservice</description>
+  <description>This will be we module for the sender-service microservice</description>
   
   <dependencies>
   <dependency>
