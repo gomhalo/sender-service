@@ -6,33 +6,50 @@
   <packaging>pom</packaging>
   <name>sender-service</name>
   <description>This is a sender-service</description>
-  
- <!--  <parent>
-  <groupId>org.springframework.boot</groupId>
-  <artifactId>spring-boot-starter-parent</artifactId>
-  <version>1.4.2</version>
-  <relativePath/> lookup parent from repository
-  </parent> -->
+    
+ <parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.4.0</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
   
   <properties>
-  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  <!-- <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding> -->
   <java.version>1.8</java.version>
-   <maven.compiler.source>1.7</maven.compiler.source>
- <maven.compiler.target>1.7</maven.compiler.target>
+ <!--   <maven.compiler.source>1.8</maven.compiler.source>
+ <maven.compiler.target>1.8</maven.compiler.target> -->
   
   </properties>
   
-  <dependencyManagement>
   <dependencies>
+  <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-web</artifactId>
+</dependency>
+
   
   </dependencies>
- </dependencyManagement> 
+ 
+ <build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+        <skip>true</skip>
+    </configuration>
+			</plugin>
+		</plugins>
+	</build> 
   <modules>
   	<module>model</module>
   	<module>persistence</module>
-  	<module>service</module>
   	<module>web</module>
   	<module>configuration</module>
+  	<module>bussiness</module>
   </modules>
+  
 </project>

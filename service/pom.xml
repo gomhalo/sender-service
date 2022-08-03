@@ -20,5 +20,21 @@
   <artifactId>persistence</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   </dependency>
+  <dependency>
+   <groupId>com.amanuel.aregay</groupId>
+  <artifactId>configuration</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  </dependency>
+  
   </dependencies>
+  
+  <build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+		<finalName>service</finalName>
+	</build>
 </project>

@@ -6,14 +6,14 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>web</artifactId>
-  <packaging>jar</packaging>
+  <packaging>war</packaging>
   <name>web</name>
   <description>This will be the web module  for the sender-service microservice</description>
   
   <dependencies>
   <dependency>
   <groupId>com.amanuel.aregay</groupId>
-  <artifactId>domain</artifactId>
+  <artifactId>model</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   </dependency>
   <dependency>
@@ -23,31 +23,26 @@
   </dependency>
   <dependency>
   <groupId>com.amanuel.aregay</groupId>
-  <artifactId>service</artifactId>
+  <artifactId>bussiness</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   </dependency>
-		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
-<dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-web</artifactId>
-    <version>2.7.2</version>
-</dependency>
-		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test -->
-<dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-test</artifactId>
-    <version>2.7.2</version>
-    <scope>test</scope>
-</dependency>
+   <dependency>
+   <groupId>com.amanuel.aregay</groupId>
+  <artifactId>configuration</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  </dependency>
   
   </dependencies>
+  
   <build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<version>2.2.6.RELEASE</version>
+				<configuration>
+        <skip>false</skip>
+    </configuration>
 			</plugin>
 		</plugins>
-	</build>
+	</build> 
 </project>

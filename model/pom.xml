@@ -6,16 +6,10 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>model</artifactId>
-  <packaging>jar</packaging>
   <name>model</name>
   <description>This will be the model for the sender-service microservice</description>
+  <dependencies>
+
+</dependencies>
   
-  <build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
 </project>
