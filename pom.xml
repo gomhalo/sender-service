@@ -10,17 +10,17 @@
  <parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.4.0</version>
+		<version>2.4.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
   
   <properties>
-  <!-- <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding> -->
+  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding> 
   <java.version>1.8</java.version>
- <!--   <maven.compiler.source>1.8</maven.compiler.source>
- <maven.compiler.target>1.8</maven.compiler.target> -->
-  
+  <!-- <start-class>com.aregay.WebApplication</start-class> -->
+  <spring-cloud.version>2020.0.0</spring-cloud.version>
+ 
   </properties>
   
   <dependencies>
@@ -30,20 +30,40 @@
     <artifactId>spring-boot-starter-web</artifactId>
 </dependency>
 
+<dependency>
+			<groupId>org.yaml</groupId>
+			<artifactId>snakeyaml</artifactId>
+			<version>1.27</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
   
   </dependencies>
+  
+  <dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
  
- <build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-        <skip>true</skip>
-    </configuration>
-			</plugin>
-		</plugins>
-	</build> 
+ 
   <modules>
   	<module>model</module>
   	<module>persistence</module>
@@ -51,5 +71,25 @@
   	<module>configuration</module>
   	<module>bussiness</module>
   </modules>
+  <!-- <repositories>
+		<repository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/milestone</url>
+		</repository>
+	</repositories> -->
+	
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-maven-plugin</artifactId>
+            <version>1.2.7.RELEASE</version>
+            <configuration>
+                <mainClass>com.amanuel.aregay.WebApplication</mainClass>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
   
 </project>
