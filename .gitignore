@@ -1,6 +1,8 @@
-*.settings
+.settings
 target/*
 *.jar
 *.war
 *.project
 web/*
+*.project
+.DS_Store
